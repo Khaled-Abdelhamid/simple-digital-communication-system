@@ -58,7 +58,9 @@ switch type
            else
                outputs=[outputs 0];
            end
+           
            flag = flag+1;
+           
            if (flag==no_bits_per_bit)
                flag = 0;
                level = bi2de(outputs(end-no_points_per_bit+1:end));
