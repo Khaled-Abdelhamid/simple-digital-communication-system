@@ -14,7 +14,7 @@ out_polar=encoder(arr,bit_duration,fs,ampl,'Polar NRZ');
 out_manchester=encoder(arr,bit_duration,fs,ampl,'Manchester');
 
 subplot(3,1,1)
-sgtitle('encoder test signals')
+sgtitle('Encoder test signals')
 plot(out_unipolar)
 grid on
 
