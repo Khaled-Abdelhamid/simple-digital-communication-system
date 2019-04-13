@@ -5,7 +5,7 @@ flag =0;
 outputs =[];
 
 switch type
-    case 'Uipolar NRZ'
+    case 'Unipolar NRZ'
 
         for i=1:length(enc_out)/(no_points_per_bit)
             if enc_out((i-1)*no_points_per_bit+1)>0

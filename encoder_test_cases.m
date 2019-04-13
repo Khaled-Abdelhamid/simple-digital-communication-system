@@ -9,10 +9,13 @@ ampl=1;
 %'Polar NRZ'
 %'Manchester'
 
+ts = 1/fs;
+points_no=floor(ts/bit_duration);
+
 out_unipolar=encoder(arr,bit_duration,fs,ampl,'Unipolar NRZ');
 out_polar=encoder(arr,bit_duration,fs,ampl,'Polar NRZ');
 out_manchester=encoder(arr,bit_duration,fs,ampl,'Manchester');
-
+dec_out = decoder(out_unipolar,points_no,2,'Uipolar NRZ');
 subplot(3,1,1)
 sgtitle('Encoder test signals')
 plot(out_unipolar)
@@ -38,3 +41,14 @@ axis([0 length(out_manchester) ,1.5*min(out_manchester),1.5*max(out_manchester)]
 title('Manchester')
 xlabel('time (s)')
 ylabel('amplitude (V)')
+
+
+
+
+%%
+   t = 0:10; x = sin(t);
+   length(t)
+   tnew = 0:.25:10;
+   xnew = interp1(t,x,tnew); 
+   length(xnew)
+   plot(t,x,'o',tnew,xnew)
