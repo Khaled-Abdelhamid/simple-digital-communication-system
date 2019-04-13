@@ -6,7 +6,7 @@ outputs =[];
 
 switch type
     case 'Uipolar NRZ'
-        
+
         for i=1:length(enc_out)/(no_points_per_bit)
             if enc_out((i-1)*no_points_per_bit+1)>0
                 outputs=[outputs 1];
@@ -19,19 +19,15 @@ switch type
                 outputs(end-no_bits_per_sample+1:end)
                 level = bi2de(fliplr(outputs(end-no_bits_per_sample+1:end)));
                 output = [output level];
-                
+
             end
-            
-            
+
+
         end
-        
-        
-        
-        
-        
-        
+
+
     case 'Polar NRZ'
-        
+
         for i=1:length(enc_out)/(no_points_per_bit)
             if enc_out((i-1)*no_points_per_bit+1)>0
                 outputs=[outputs 1];
@@ -43,12 +39,12 @@ switch type
                 flag = 0;
                 level = bi2de(outputs(end-no_bits_per_sample+1:end));
                 output = [output level];
-                
+
             end
         end
-        
+
     case 'Manchester'
-        
+
         for i=1:length(enc_out)/(no_points_per_bit)
             if enc_out((i-1)*no_points_per_bit+1)>0
                 outputs=[outputs 1];
@@ -60,11 +56,11 @@ switch type
                 flag = 0;
                 level = bi2de(outputs(end-no_bits_per_sample+1:end));
                 output = [output level];
-                
+
             end
         end
-        
-        
+
+
     otherwise
         disp ('the ending tpe is undefined please check one of the list below:')
         disp('1-Unipolar NRZ')
