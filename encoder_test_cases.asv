@@ -47,8 +47,7 @@ ylabel('amplitude (V)')
 
 %%
    t = 0:10; x = sin(t);
-   length(t)
+   leng
    tnew = 0:.25:10;
    xnew = interp1(t,x,tnew); 
-   length(xnew)
    plot(t,x,'o',tnew,xnew)

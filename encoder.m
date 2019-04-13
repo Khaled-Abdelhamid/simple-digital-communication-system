@@ -9,7 +9,7 @@
 function output=encoder(arr,bit_duration,fs,ampl,type)
 output=[];
 ts=1/fs;
-points_no=ts/bit_duration;%to get the nember of points needed to represent each sample
+points_no=floor(ts/bit_duration);%to get the nember of points needed to represent each sample
 
 
 switch type
