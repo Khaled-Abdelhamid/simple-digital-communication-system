@@ -17,7 +17,7 @@ switch type
             if (flag==no_bits_per_sample)
                 flag = 0;
                 outputs(end-no_bits_per_sample+1:end)
-                level = bi2de(fliplr(outputs(end-no_bits_per_sample+1:end)));
+                level = bi2de(fliplr(outputs(end-no_bits_per_sample+1:end));
                 output = [output level];
                 
             end
